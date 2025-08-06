@@ -7,7 +7,7 @@ object RetrofitHelper {
 
     fun getRetrofit(): Retrofit {
         var retrofit = Retrofit.Builder()
-            .baseUrl("https://api.chucknorris.io/jokes/")
+            .baseUrl("https://api.chucknorris.io/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         return retrofit

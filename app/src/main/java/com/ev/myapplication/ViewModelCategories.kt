@@ -7,13 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.ev.myapplication.model.respose.Category
 import com.ev.myapplication.repository.Repository
 import com.ev.myapplication.repository.RepositoryImp
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class ViewModelCategories(val repository: Repository): ViewModel() {
-
-
+class ViewModelCategories @Inject constructor(val repository: Repository): ViewModel() {
 
     var _categoriList: MutableLiveData<List<String>> = MutableLiveData(listOf<String>())
     var categoriList: LiveData<List<String>> = _categoriList

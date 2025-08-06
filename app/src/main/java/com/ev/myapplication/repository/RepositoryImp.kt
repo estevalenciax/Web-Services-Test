@@ -3,13 +3,13 @@ package com.ev.myapplication.repository
 import com.ev.myapplication.core.network.RetrofitHelper.getRetrofit
 import com.ev.myapplication.core.network.WebService
 import com.ev.myapplication.model.respose.Category
+import javax.inject.Inject
 
 
-class RepositoryImp(@Inject contructor val webService: WebService) : Repository {
+class RepositoryImp @Inject constructor (private val webService: WebService) : Repository {
 
     override suspend fun getCategories(): List<String> {
         try {
-            val webService = getRetrofit().create(WebService::class.java)
             val response = webService.getCategories()
             return response
         } catch (e: Exception) {

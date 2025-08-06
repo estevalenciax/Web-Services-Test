@@ -57,4 +57,10 @@ dependencies {
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.hilt.android)
     kapt((libs.hilt.compiler))
+    implementation (libs.androidx.fragment.ktx)
+    implementation (libs.androidx.activity.ktx)
+
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
+
 }

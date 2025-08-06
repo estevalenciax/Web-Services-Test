@@ -6,9 +6,9 @@ import retrofit2.http.Query
 
 interface WebService {
 
-    @GET("categories")
+    @GET("/jokes/categories")
     suspend fun getCategories() : List<String>
 
-    @GET("random")
+    @GET("/jokes/random")
     suspend fun getCategoryDetails(@Query("category") category: String) : CategoriesResponse
 }
